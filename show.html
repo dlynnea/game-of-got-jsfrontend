@@ -8,12 +8,14 @@
     <link rel="stylesheet" rel="app.css" />
 </head>
 <body>
-    <h2>Houses:</h2>
+    <div id="king-houses">
+    </div>
+    <h2 id="house-list">Houses:</h2>
     <div id="house-div"></div>
-    <form method="post" action="http://localhost:3000/houses">
+    <!-- <form method="post" action="http://localhost:3000/houses"> -->
     <select name="name" id="dropdown"></select>
-        <input type="submit" name="submit" />
-    </form>
+        <button id="update-button">Update!</button>
+    <!-- </form> -->
     <script src="show.js"></script>
 </body>
 </html>
