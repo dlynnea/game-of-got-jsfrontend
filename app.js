@@ -1,10 +1,12 @@
-fetch("http://localhost:3000/houses")
-    .then(response => response.json())
-    .then(houses => houses.map(showHouses))
+const divEl = document.getElementById('king-div')
 
-    function showHouses(house) {
+fetch("http://localhost:3000/kings")
+    .then(response => response.json())
+    .then(houses => houses.map(showKings))
+
+    function showKings(king) {
         let h2 = document.createElement('h2')
-        h2.innerHTML = `<a href="show.html?if=${house.id}">${house.name}</a>`
-        document.body.appendChild(h2)
+        h2.innerHTML = `<a href="show.html?id=${king.id}">${king.name}</a>`
+        divEl.appendChild(h2)
     }
 
