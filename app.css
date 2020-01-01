@@ -1,7 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+style {
+    opacity: 0.2;
+}
+
 label {
     font: 'trajan pro'
 }
 
 body {
     font: 'trajan pro'
+}
+
+#king-card > h2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: auto;
+    border: 5px solid black;
+    padding: 7px;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-basis: auto;
+    flex: 0 1 24%;
+}
+
+style {
+    opacity: 0.2;
+}
+
+button {
+    display:inline-block;
+     padding:0.35em 1.2em;
+     border:0.1em solid #FFFFFF;
+     margin:0 0.3em 0.3em 0;
+     border-radius:0.12em;
+     box-sizing: border-box;
+     text-decoration:none;
+     font-family:'Roboto',sans-serif;
+     font-weight:300;
+     color:#FFFFFF;
+     text-align:center;
+     transition: all 0.2s;
+}
+
+button:hover {
+    color:#000000;
+ background-color:#FFFFFF;
 }

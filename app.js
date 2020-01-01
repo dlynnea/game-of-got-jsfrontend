@@ -1,4 +1,4 @@
-const divEl = document.getElementById('king-div')
+const divCard = document.getElementById("king-card")
 
 fetch("http://localhost:3000/kings")
     .then(response => response.json())
@@ -13,7 +13,7 @@ fetch("http://localhost:3000/kings")
             event.target.parentNode.remove()
             deleteKing(king.id)
         })
-        divEl.appendChild(h2)
+        divCard.appendChild(h2)
         h2.appendChild(deleteButton)
     }
 
