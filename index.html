@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="app.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+        </style>
 </head>
 <body>
     <style id="img">
@@ -13,7 +16,7 @@
         background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/game-of-thrones-ancient-world-map-design-turnpike.jpg');
         }
     </style>
-    <h1>Welcome to the Game of Thrones!</h1>
+    <h1 class="welcome">Welcome to the Game of Thrones!</h1>
     <h2>King Cards:</h2>
     <div id="king-card">
     </div>
@@ -22,6 +25,11 @@
         <input type="text" name="name" />
         <input type="submit" value="Submit" class="submitbutton" />
     </form>
+    <div id="wedding">
+        <h2>Invite a King to a wedding</h2>
+        <select id="wedding-dropdown"></select>
+        <button id="invite-button">Invite</button>
+    </div>
     <div id="battle">
     </div>
     <script src="app.js"></script>
