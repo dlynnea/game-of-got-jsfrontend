@@ -10,10 +10,14 @@ style {
 }
 
 h1 {
-    size: 5em;
+    font-size: 3em;
 }
 
-#king-card > h2 > a {
+#king-card > h2 {
+    display: inline-block;
+}
+
+h2 > a {
     display: inline-block;
     width: 200px;
     height: 200px;
@@ -23,18 +27,21 @@ h1 {
     align-items: horizontal;
     /* flex-basis: auto;
     align-items: flex-start; */
-    border: 5px solid rgb(80, 34, 34);
+    border: 5px solid rgb(48, 20, 20);
     padding: 7px;
     border-radius: 20%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-h1 {
-    size: 38px;
+    background-color: rgb(216, 189, 130);
 }
 
 #king-card > h2 > a:hover {
     box-shadow: 0 8px 16px 0 rgba(3, 3, 3, 0.2);
+}
+
+#battle > h1 > a {
+    font-size: ;
+    border: 3px solid rgb(31, 13, 13);
+    border-radius: 0;
 }
 
 a {
@@ -56,6 +63,10 @@ form {
     border: 2px solid black;
     padding: 7px;
     padding-left: 1px;
+}
+
+#battle > h1 {
+    text-align: center;
 }
 
 style {
