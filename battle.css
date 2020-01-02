@@ -1,0 +1,44 @@
+* {
+    font-family: 'EB Garamond', serif;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    padding: 8px;
+    margin: 4px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 3em;
+    margin-left: 7px;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+input {
+    display: inline-block;
+    padding:0.35em 1.2em;
+    border:0.2em solid rgb(43, 19, 19);
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'EB Garamond';
+    font-weight:300;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+    border-radius: 10%;
+}
+
+input:hover {
+    background-color:rgba(207, 206, 218, 0.932);
+}
+
+select.dropdown {
+    margin-left: 4px;
+}
