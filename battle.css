@@ -7,7 +7,7 @@ form {
     display: inline-block;
     padding: 8px;
     margin: 4px;
-    border: 2px solid black;
+    border: 2px solid rgb(182, 181, 181);
     border-radius: 10px;
 }
 
@@ -23,7 +23,7 @@ h5 {
 input {
     display: inline-block;
     padding:0.35em 1.2em;
-    border:0.2em solid rgb(43, 19, 19);
+    border:0.2em solid rgb(182, 181, 181);
     margin:0 0.3em 0.3em 0;
     box-sizing: border-box;
     text-decoration: none;

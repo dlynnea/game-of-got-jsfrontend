@@ -3,41 +3,69 @@
     /* text-align: center; */
     /* float: auto; */
     font-family: 'EB Garamond', serif;
+    text-align: center;
 }
 
 #king-name {
     font-size: 2em;
     color: rgb(227, 225, 225);
+    margin: 4px;
+    padding: 4px;
 }
 
-#house-ul {
+/* #house-ul {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: auto;
-    background-color: rgb(227, 225, 225);
-    color: black;
+    /* background-color: rgb(227, 225, 225); */
+    /* color: rgb(227, 225, 225);
     text-align: center;
+}  */
+
+ul > li {
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    width: 90px;
+    height: 90px;
+    margin: 1em;
+    padding: 1em;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-start; */
+    border: 5px solid rgb(58, 56, 56);
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: rgb(138, 136, 136)
 }
 
-li {
-    padding: 4px;
-}
-
-h3 {
-    font-size: 38px;
+.house-label {
+    font-size: 24px;
     color: rgb(227, 225, 225);
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+label {
+    color: rgb(218, 216, 216);
+    font-size: 2em;
+}
+
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
