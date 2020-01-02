@@ -11,11 +11,28 @@ fetch(`http://localhost:3000/kings/${kingID}`)
         fillLordlessList(king)
         updateHousesToLordless(king)
     })
+    .then(result => deleteKing())
     .catch(error => console.log(error))
 
-// fetch(`http://localhost:3000/kings/${kingID}`, {
-//     method: "DELETE"
-// })
+function updateHousesToLordless(king) {
+    console.log("Structurally important console log, provides a return value")
+    king.houses.map(house => {
+        fetch(`http://localhost:3000/houses/${house.id}`, {
+            method:'PUT',
+            headers:{  
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            }, 
+            body:JSON.stringify({name: house.name, king_id: null})
+        })
+    })
+}
+
+function deleteKing(){
+    fetch(`http://localhost:3000/kings/${kingID}`, {
+        method: "DELETE"
+    })
+}
 
 ///HELPERS///
 function makeWeddingHeader(king) {
@@ -38,16 +55,5 @@ function fillLordlessList(king) {
     })
 }
 
-function updateHousesToLordless(king) {
-    king.houses.map(house => {
-        fetch(`http://localhost:3000/houses/${house.id}`, {
-            method:'PUT',
-            headers:{  
-                'Content-Type':'application/json',
-                'Accept':'application/json'
-            }, 
-            body:JSON.stringify({name: house.name, king_id: null})
-        })
-    })
-}
+
 ///HELPERS END///
