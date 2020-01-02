@@ -3,16 +3,21 @@ const theKingDiv = document.getElementById("king-div")
 const deadDiv = document.getElementById("dead-div")
 const lordlessUL = document.getElementById("lordless-ul")
 
-
 fetch(`http://localhost:3000/kings/${kingID}`)
     .then(response => response.json())
     .then(king => {
         makeWeddingHeader(king)
         makeWeddingFooter(king)
-        makeLordlessList(king)
+        fillLordlessList(king)
+        updateHousesToLordless(king)
     })
     .catch(error => console.log(error))
 
+// fetch(`http://localhost:3000/kings/${kingID}`, {
+//     method: "DELETE"
+// })
+
+///HELPERS///
 function makeWeddingHeader(king) {
     let kingH1 = document.createElement("h1")
     kingH1.innerText = `King ${king.name} has arrived at the wedding.`
@@ -25,10 +30,24 @@ function makeWeddingFooter(king) {
     deadDiv.appendChild(deadH1)
 }
 
-function makeLordlessList(king) {
+function fillLordlessList(king) {
     king.houses.map(house => {
         let houseLI = document.createElement("li")
         houseLI.innerText = house.name
         lordlessUL.appendChild(houseLI)
     })
 }
+
+function updateHousesToLordless(king) {
+    king.houses.map(house => {
+        fetch(`http://localhost:3000/houses/${house.id}`, {
+            method:'PUT',
+            headers:{  
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            }, 
+            body:JSON.stringify({name: house.name, king_id: null})
+        })
+    })
+}
+///HELPERS END///
