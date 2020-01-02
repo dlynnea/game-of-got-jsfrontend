@@ -1,37 +1,61 @@
 * {
     box-sizing: border-box;
+    text-align: center;
+    /* float: auto; */ 
+    font-family: 'EB Garamond', serif;
 }
 
 style {
     opacity: 0.2;
 }
 
-label {
-    font: 'trajan pro'
+h1 {
+    size: 5em;
 }
 
-body {
-    font: 'trajan pro'
-}
-
-#king-card > h2 {
+#king-card > h2 > a {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 1em;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    flex-basis: auto;
-    border: 5px solid black;
+    align-items: horizontal;
+    /* flex-basis: auto;
+    align-items: flex-start; */
+    border: 5px solid rgb(80, 34, 34);
     padding: 7px;
+    border-radius: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+h1 {
+    size: 38px;
+}
+
+#king-card > h2 > a:hover {
+    box-shadow: 0 8px 16px 0 rgba(3, 3, 3, 0.2);
 }
 
 a {
     text-decoration: none;
+    color: rgb(41, 23, 23);
     display: flex;
-    flex-flow: row wrap;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: column;
-    flex-basis: auto;
-    flex: 0 1 24%;
+}
+
+form {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    margin: 1em;
+    /* display: flex;
+    justify-content: center;
+    flex-basis: auto; */
+    border: 2px solid black;
+    padding: 7px;
+    padding-left: 1px;
 }
 
 style {
@@ -39,21 +63,99 @@ style {
 }
 
 button {
-    display:inline-block;
-     padding:0.35em 1.2em;
-     border:0.1em solid #FFFFFF;
-     margin:0 0.3em 0.3em 0;
-     border-radius:0.12em;
-     box-sizing: border-box;
-     text-decoration:none;
-     font-family:'Roboto',sans-serif;
-     font-weight:300;
-     color:#FFFFFF;
-     text-align:center;
-     transition: all 0.2s;
+    display: inline-block;
+    padding:0.35em 1.2em;
+    border:0.2em solid rgb(80, 34, 34);
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+    border-radius: 20%;
 }
 
 button:hover {
-    color:#000000;
- background-color:#FFFFFF;
+    color:#00000042;
+    background-color:rgb(179, 170, 170);
 }
+
+label {
+    size: 2em;
+    display: flex;
+    justify-content: center;
+    flex-basis: auto;
+    padding: 7px;
+}
+
+.submitbutton {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.2em solid black;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+    margin: 4px;
+    border-radius: 20%;
+}
+
+h1 > a {
+    color: black;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers  */
+/* article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;  */
+	/* border-spacing: 0;
+} */

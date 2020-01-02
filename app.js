@@ -1,4 +1,5 @@
 const divCard = document.getElementById("king-card")
+const divBattle = document.getElementById("battle")
 const weddingDropdown = document.getElementById("wedding-dropdown")
 const inviteButton = document.getElementById("invite-button")
 
@@ -19,9 +20,9 @@ fetch("http://localhost:3000/kings")
         h2.appendChild(deleteButton)
     }
 
-let h3 = document.createElement('h3')
-h3.innerHTML = '<a href="battle.html">Battle?</a>'
-document.body.appendChild(h3)
+let h1 = document.createElement('h1')
+h1.innerHTML = `<a href="battle.html">Let's Battle!</a>`
+divBattle.appendChild(h1)
 
 function deleteKing(id) {
     fetch(`http://localhost:3000/kings/${id}`, {
