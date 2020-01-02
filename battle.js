@@ -1,4 +1,5 @@
 const kingDropdown = document.getElementsByClassName("dropdown")
+const battleForm = document.getElementById("battle-form")
 const battleResultsDiv = document.getElementById("battle-results")
 const battleButton = document.getElementById("battle-button")
 
