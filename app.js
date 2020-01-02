@@ -15,9 +15,9 @@ fetch("http://localhost:3000/kings")
         // deleteButton.addEventListener('click', () => {
         //     event.target.parentNode.remove()
         //     deleteKing(king.id)
-        })
+        // })
         divCard.appendChild(h2)
-        h2.appendChild(deleteButton)
+        // h2.appendChild(deleteButton)
     }
 
 let h1 = document.createElement('h1')
