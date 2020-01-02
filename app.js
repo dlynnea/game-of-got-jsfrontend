@@ -18,7 +18,6 @@ fetch("http://localhost:3000/kings")
         divCard.appendChild(h2)
         }
         // h2.appendChild(deleteButton)
-    
 
 let h1 = document.createElement('h1')
 h1.innerHTML = `<a href="battle.html">Let's Battle!</a>`
