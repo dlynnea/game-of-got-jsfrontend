@@ -1,4 +1,5 @@
 const kingDropdown = document.getElementsByClassName("dropdown")
+const battleForm = document.getElementById("battle-form")
 
     fetch("http://localhost:3000/kings")
     .then(response => response.json())
