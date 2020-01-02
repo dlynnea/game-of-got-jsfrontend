@@ -10,11 +10,11 @@ fetch("http://localhost:3000/kings")
     function showKings(king) {
         let h2 = document.createElement('h2')
         h2.innerHTML = `<a href="show.html?id=${king.id}">${king.name}</a>`
-        let deleteButton = document.createElement('button')
-        deleteButton.textContent =  "delete"
-        deleteButton.addEventListener('click', () => {
-            event.target.parentNode.remove()
-            deleteKing(king.id)
+        // let deleteButton = document.createElement('button')
+        // deleteButton.textContent =  "delete"
+        // deleteButton.addEventListener('click', () => {
+        //     event.target.parentNode.remove()
+        //     deleteKing(king.id)
         })
         divCard.appendChild(h2)
         h2.appendChild(deleteButton)
