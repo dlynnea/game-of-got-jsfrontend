@@ -1,62 +1,88 @@
 const searchParams = new URLSearchParams(window.location.search)
-const id = searchParams.get('id')
+const kingID = searchParams.get('id')
 
 const houseDropdown = document.getElementById("dropdown")
-const divElement = document.getElementById("house-div")
-const divKing = document.getElementById("king-houses")
-const list = document.getElementById("house-list")
+const houseUL = document.getElementById("house-ul")
+const divKing = document.getElementById("king-name")
 const updateButton = document.getElementById("update-button")
 
-fetch(`http://localhost:3000/kings/${id}`)
+fetch(`http://localhost:3000/kings/${kingID}`)
     .then(response => response.json())
     .then(king => {
-        let h2 = document.createElement('h2')
-        divKing.textContent = king.name
-        king.houses.map(house => {
-            let h4 = document.createElement('h4')
-            h4.textContent = house.name
-            list.appendChild(h4)
-        })
-        divElement.appendChild(h2)
+        listKingsName(king)
+        listKingsHouses(king)
 })
 
+fetch("http://localhost:3000/houses")
+    .then(response => response.json())
+    .then(houses => {
+        fillOutEnlistHouseDropdown(houses)
+})
 
-
-function updateHouse(house){
-    console.log("id", house)
-    fetch(`http://localhost:3000/houses/${house}`, {
+updateButton.addEventListener("click", () => {
+    let houseName = houseDropdown.options[houseDropdown.selectedIndex].textContent
+    let houseID = houseDropdown.value
+    fetch(`http://localhost:3000/houses/${houseID}`, {
         method:'PUT',
         headers:{
             'Content-Type':'application/json',
             'Accept':'application/json'
-          }, 
-          body:JSON.stringify({name:"House Updated"})
+        }, 
+        body:JSON.stringify({name: houseName, king_id: kingID})
     })
+})
 
+///HELPERS///
+
+function fillOutEnlistHouseDropdown(houses) {
+    houses.map(house => {
+        let houseOption = document.createElement('option')
+        houseOption.textContent = house.name
+        houseOption.value = house.id
+        houseDropdown.appendChild(houseOption)
+    })
 }
 
-fetch("http://localhost:3000/houses")
-    .then(response => response.json())
-    .then(houses => houses.map(house => {
-        let option = document.createElement('option')
-        option.textContent = house.name
-        option.value = house.id
-        houseDropdown.appendChild(option)
-    }))
+function listKingsName(king) {
+    let kingH2 = document.createElement('h2')
+    kingH2.textContent = `King ${king.name}`
+    divKing.appendChild(kingH2)
+}
 
-    ////
-    // updateButton.addEventListener('click', ()=> {
-    //     let houseId = houseDropdown.options[houseDropdown.selectedIndex].value
-    //     // console.log("houseId", houseId)
-    //     let houseKingId = ""
-    //     fetch(`http://localhost:3000/house_kings`)
-    //         .then(response => response.json())
-    //         .then(house_kings => house_kings.map(house_king => {
-    //             // console.log(house_king.house_id == houseId)
-    //             if (house_king.house_id == houseId) {
-    //                 houseKingId = "banana"
-    //             } 
-    //         })) 
-    //         console.log(houseKingId)
-    //     updateHouse(houseKingId)
-    // })
+function listKingsHouses(king) {
+    king.houses.map(house => {
+        let houseLI = document.createElement('li')
+        houseLI.textContent = house.name
+        houseUL.appendChild(houseLI)
+    })
+}
+///HELPERS END///
+
+
+// updateButton.addEventListener('click', ()=> {
+//         let houseId = houseDropdown.options[houseDropdown.selectedIndex].value
+//         // console.log("houseId", houseId)
+//         let houseKingId = ""
+//         fetch(`http://localhost:3000/house_kings`)
+//             .then(response => response.json())
+//             .then(house_kings => house_kings.map(house_king => {
+//             // console.log(house_king.house_id == houseId)
+//             if (house_king.house_id == houseId) {
+//                     houseKingId = "banana"
+//                 } 
+//             })) 
+//             console.log(houseKingId)
+//         updateHouse(houseKingId)
+//     })
+
+// function updateHouse(house){
+//     console.log("id", house)
+//     fetch(`http://localhost:3000/houses/${house}`, {
+//         method:'PUT',
+//         headers:{
+//             'Content-Type':'application/json',
+//             'Accept':'application/json'
+//             }, 
+//             body:JSON.stringify({name:"House Updated"})
+//     })
+// }
