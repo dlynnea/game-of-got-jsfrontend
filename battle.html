@@ -16,16 +16,20 @@
         background-image: url('https://i.ytimg.com/vi/sdu7SW7_RMk/maxresdefault.jpg');
         }
     </style>
+
     <h2 id="battle-form">Battle</h2>
-    <form method="get" action="http://localhost:3000/kings">
+    <form>
+
         <label>Pick a King</label>
         <select name="name" class="dropdown">
         </select>
         <h5>VS.</h5>
         <label>Pick another King</label>
         <select name="name" class="dropdown"></select>
-        <br><br><input type="submit" value="Submit" />
+        <br><br>
+        <button id="battle-button">FIGHT!</button>
     </form>
+    <div id="battle-results"></div>
     <script src="battle.js"></script>
 </body>
 </html>
