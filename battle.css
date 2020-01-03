@@ -5,15 +5,40 @@
 
 form {
     display: inline-block;
+    height: 250px;
+    width: 300px;
     padding: 8px;
     margin: 4px;
     border: 2px solid rgb(182, 181, 181);
     border-radius: 10px;
+    background-color: rgba(192, 189, 189, 0.5);
+    box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.2);
+}
+
+#battle-button {
+    height: 30px;
+    width: 80px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#battle-results > h1 {
+    font-size: 2em;
+}
+
+label {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+select.dropdown {
+    size: 2em;
 }
 
 h2 {
     font-size: 3em;
-    margin-left: 7px;
+    /* margin-left: 7px; */
+    margin: .2em;
 }
 
 h5 {
@@ -41,6 +66,7 @@ input:hover {
 
 select.dropdown {
     margin-left: 4px;
+
 }
 
 #battle-results > #card-1 {

@@ -32,13 +32,12 @@ ul > li {
     height: 90px;
     margin: 1em;
     padding: 1em;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: flex-start; */
-    border: 5px solid rgb(58, 56, 56);
+    border: 5px solid rgba(39, 38, 38, 0.726);
     border-radius: 10%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: rgb(138, 136, 136)
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: rgb(138, 136, 136) */
+    background-color: rgba(192, 189, 189, 0.6);
+    box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.2);
 }
 
 .house-label {
@@ -49,14 +48,28 @@ ul > li {
 a {
     text-decoration: none;
     color: white;
-    margin: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     font-size: 20px;
+    background-color: rgba(192, 189, 189, 0.6);
+    border: 2px solid rgba(39, 38, 38, 0.726);
+}
+
+footer {
+    margin: 20px;
 }
 
 label {
     color: rgb(218, 216, 216);
     font-size: 2em;
+}
+
+#enlist-label {
+    margin-bottom: 20px;
+}
+
+select#dropdown {
+    size: 4em;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -71,12 +84,12 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
+    /* margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
+    vertical-align: baseline; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

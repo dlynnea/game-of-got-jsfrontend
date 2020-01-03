@@ -27,11 +27,14 @@ h2 > a {
     align-items: horizontal;
     /* flex-basis: auto;
     align-items: flex-start; */
-    border: 5px solid rgb(48, 20, 20);
+    border: 3px solid rgba(44, 18, 18, 0.719);
     padding: 7px;
-    border-radius: 20%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: rgb(216, 189, 130);
+    border-radius: 10%;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: rgb(216, 189, 130); */
+
+    background-color: rgba(192, 189, 189, 0.301);
+    box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.2);
 }
 
 #king-card > h2 > a:hover {
@@ -58,6 +61,7 @@ form.create-form {
     border-radius: 5px;
     padding: 10px;
     border-style: double;
+    background-color: rgba(192, 189, 189, 0.185);
 }
 
 style {
