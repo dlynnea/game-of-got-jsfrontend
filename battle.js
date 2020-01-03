@@ -97,7 +97,7 @@ function kingBattle(kings) {
     }
     
     let winnerH1 = document.createElement("h1")
-    winnerH1.textContent = "Winner! This house scored higher"
+    winnerH1.innerHTML = `&Star; WINNER! &Star;`
 
     if (attackerPower > defenderPower){
         console.log("Attacker won")

@@ -72,6 +72,7 @@ select.dropdown {
 
 #battle-results > #card-1 {
     font-size: .8em;
+    color: white;
     align-content: flex-start;
     display: inline-block;
     height: 300px;
@@ -81,6 +82,7 @@ select.dropdown {
 }
 
 #battle-results > #card-2 {
+    color: white;
     font-size: .8em;
     align-content: flex-start;
     display: inline-block;
@@ -91,7 +93,7 @@ select.dropdown {
 }
 
 h1 {
-    color: rgb(16, 1, 102);
+    color: rgb(2, 243, 211);
     font-size: 3em;
 }
 

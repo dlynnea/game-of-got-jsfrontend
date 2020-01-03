@@ -91,32 +91,3 @@ function fillOutLordlessUL(houses) {
     }
 }
 ///HELPERS END///
-
-
-// updateButton.addEventListener('click', ()=> {
-//         let houseId = houseDropdown.options[houseDropdown.selectedIndex].value
-//         // console.log("houseId", houseId)
-//         let houseKingId = ""
-//         fetch(`http://localhost:3000/house_kings`)
-//             .then(response => response.json())
-//             .then(house_kings => house_kings.map(house_king => {
-//             // console.log(house_king.house_id == houseId)
-//             if (house_king.house_id == houseId) {
-//                     houseKingId = "banana"
-//                 } 
-//             })) 
-//             console.log(houseKingId)
-//         updateHouse(houseKingId)
-//     })
-
-// function updateHouse(house){
-//     console.log("id", house)
-//     fetch(`http://localhost:3000/houses/${house}`, {
-//         method:'PUT',
-//         headers:{
-//             'Content-Type':'application/json',
-//             'Accept':'application/json'
-//             }, 
-//             body:JSON.stringify({name:"House Updated"})
-//     })
-// }
