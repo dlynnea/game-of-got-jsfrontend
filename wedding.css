@@ -12,10 +12,10 @@ body {
 }
 
 h3 {
+    text-align: center;
     font-size: 24px;
-    float: right;
-    width: 750px;
-    margin-right: 70px;
+    margin-right: 90px;
+    margin-left: 90px;
 }
 
 div#dead-div {
@@ -60,18 +60,14 @@ footer {
 }
 
 aside.quote {
-    float: left;
-    width: 500px;
-    height: 200px;
-    /* background: url(images/openquote.gif) top left no-repeat; */
+    clear: both;
     color: rgb(7, 7, 7);
     font-size: 26px;
     line-height: 1.2;
     font-style: italic;
     padding: 5px;
-    margin-left: 40px;
-    /* border: 2px solid rgba(243, 241, 241, 0.185);
-    border-radius: 10px; */
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 /* Meyer Web */

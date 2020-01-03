@@ -20,6 +20,7 @@ form {
     width: 80px;
     font-size: 16px;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 #battle-results > h1 {
@@ -33,16 +34,16 @@ label {
 
 select.dropdown {
     size: 2em;
+    margin-top: 10px;
 }
 
 h2 {
     font-size: 3em;
-    /* margin-left: 7px; */
     margin: .2em;
 }
 
 h5 {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 input {
@@ -75,7 +76,8 @@ select.dropdown {
     display: inline-block;
     height: 300px;
     width: 300px;
-    margin: 10px;
+    margin-top: 40px;
+    margin-right: 60px;
 }
 
 #battle-results > #card-2 {
@@ -84,7 +86,13 @@ select.dropdown {
     display: inline-block;
     height: 300px;
     width: 300px;
-    margin: 10px;
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+h1 {
+    color: rgb(16, 1, 102);
+    font-size: 3em;
 }
 
 select.dropdown {
@@ -93,7 +101,7 @@ select.dropdown {
 
 a {
     text-decoration: none;
-    margin: 10px;
+    margin-bottom: 20px;
     padding: 10px;
     color: black;
     border: 5px solid rgba(243, 241, 241, 0.064);
