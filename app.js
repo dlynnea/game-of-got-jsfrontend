@@ -8,16 +8,12 @@ fetch("http://localhost:3000/kings")
     .then(kings => kings.map(showKings))
 
     function showKings(king) {
+        let image = document.createElement('img')
+        image.innerHTML = '<img src="https://c7.uihere.com/files/163/375/762/crown-jewels-stock-photography-king-royalty-free-crown.jpg" height="40" width="40">'
         let h2 = document.createElement('h2')
         h2.innerHTML = `<a href="show.html?id=${king.id}">${king.name}</a>`
-        // let deleteButton = document.createElement('button')
-        // deleteButton.textContent =  "delete"
-        // deleteButton.addEventListener('click', () => {
-        //     event.target.parentNode.remove()
-        //     deleteKing(king.id)
-        divCard.appendChild(h2)
+        divCard.append(image, h2)
         }
-        // h2.appendChild(deleteButton)
 
 let h1 = document.createElement('h1')
 h1.innerHTML = `<a href="battle.html">Let's Battle!</a>`

@@ -42,3 +42,21 @@ input:hover {
 select.dropdown {
     margin-left: 4px;
 }
+
+#battle-results > #card-1 {
+    font-size: .8em;
+    align-content: flex-start;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
+
+#battle-results > #card-2 {
+    font-size: .8em;
+    align-content: flex-start;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+}
