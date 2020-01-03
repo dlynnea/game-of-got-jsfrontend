@@ -2,6 +2,8 @@ const kingDropdown = document.getElementsByClassName("dropdown")
 const battleForm = document.getElementById("battle-form")
 const battleResultsDiv = document.getElementById("battle-results")
 const battleButton = document.getElementById("battle-button")
+const card1 = document.getElementById("card-1")
+const card2 = document.getElementById("card-2")
 
 fetch("http://localhost:3000/kings")
     .then(response => response.json())
@@ -44,7 +46,7 @@ function kingBattle(kings) {
             let housePowerH2 = document.createElement("h2")
             houseNameH2.textContent = `House: ${houseName}`
             housePowerH2.textContent = `Power: ${housePower}`
-            battleResultsDiv.append(houseNameH2, housePowerH2)
+            card1.append(houseNameH2, housePowerH2)
 
             attackerPower = housePower
         }
@@ -59,7 +61,7 @@ function kingBattle(kings) {
             let housePowerH2 = document.createElement("h2")
             houseNameH2.textContent = `House: ${houseName}`
             housePowerH2.textContent = `Power: ${housePower}`
-            battleResultsDiv.append(houseNameH2, housePowerH2)
+            card2.append(houseNameH2, housePowerH2)
 
             defenderPower = housePower
         }
@@ -70,17 +72,17 @@ function kingBattle(kings) {
     // console.log(battleResultsDiv.childNodes[1].textContent)
     // console.log(battleResultsDiv.childNodes[2].textContent)
     // console.log(battleResultsDiv.childNodes[3].textContent)
-    console.log(kings, attackKingID, defendKingID)
+    // console.log(kings, attackKingID, defendKingID)
     
     let winnerH1 = document.createElement("h1")
     winnerH1.textContent = "Winner"
 
     if (attackerPower > defenderPower){
         console.log("Attacker won")
-        battleResultsDiv.appendChild(winnerH1)
+        card1.appendChild(winnerH1)
     } else {
         console.log("Defender won")
-        battleResultsDiv.appendChild(winnerH1)
+        card2.appendChild(winnerH1)
     }
 }
 
