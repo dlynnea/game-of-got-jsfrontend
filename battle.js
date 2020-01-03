@@ -4,10 +4,12 @@ const battleResultsDiv = document.getElementById("battle-results")
 const battleButton = document.getElementById("battle-button")
 const card1 = document.getElementById("card-1")
 const card2 = document.getElementById("card-2")
+let kings
 
 fetch("http://localhost:3000/kings")
     .then(response => response.json())
-    .then(kings => {
+    .then(parsedKings => {
+        kings = parsedKings
         kingSelector(kings)
     })
 
@@ -38,10 +40,20 @@ function kingBattle(kings) {
     
     kings.map(king => {
         if (king.id == attackKingID) {
-            let house = king.houses[Math.floor(Math.random() * king.houses.length)]
-            let houseName = house.name
-            let housePower = house.power
+            createOrUpdateAttacker(king)
+        }
 
+        if (king.id == defendKingID) {
+            createOrUpdateDefender(king)
+        }
+    })
+
+    function createOrUpdateAttacker(king) {
+        let house = king.houses[Math.floor(Math.random() * king.houses.length)]
+        let houseName = house.name
+        let housePower = house.power
+
+        if (card1.childNodes.length == 0) {
             let houseNameH2 = document.createElement("h2")
             let housePowerH2 = document.createElement("h2")
             houseNameH2.textContent = `House: ${houseName}`
@@ -49,14 +61,23 @@ function kingBattle(kings) {
             card1.append(houseNameH2, housePowerH2)
 
             attackerPower = housePower
+        } else {
+            console.log(card1.childNodes)
+            card1.childNodes[0].textContent = `House: ${houseName}`
+            card1.childNodes[1].textContent = `Power: ${housePower}`
+            if (card1.childNodes[2]) {
+                card1.childNodes[2].remove()
+            }
+            attackerPower = housePower
         }
+    }
 
-        if (king.id == defendKingID) {
-            let house = king.houses[Math.floor(Math.random() * king.houses.length)]
-            let houseName = house.name
-            let housePower = house.power
+    function createOrUpdateDefender(king) {
+        let house = king.houses[Math.floor(Math.random() * king.houses.length)]
+        let houseName = house.name
+        let housePower = house.power
 
-
+        if (card2.childNodes.length == 0) {
             let houseNameH2 = document.createElement("h2")
             let housePowerH2 = document.createElement("h2")
             houseNameH2.textContent = `House: ${houseName}`
@@ -64,15 +85,16 @@ function kingBattle(kings) {
             card2.append(houseNameH2, housePowerH2)
 
             defenderPower = housePower
+        } else {
+            console.log(card2.childNodes)
+            card2.childNodes[0].textContent = `House: ${houseName}`
+            card2.childNodes[1].textContent = `Power: ${housePower}`
+            if (card2.childNodes[2]) {
+                card2.childNodes[2].remove()
+            }
+            defenderPower = housePower
         }
-
-    })
-    
-    // console.log(battleResultsDiv.childNodes[0].textContent)
-    // console.log(battleResultsDiv.childNodes[1].textContent)
-    // console.log(battleResultsDiv.childNodes[2].textContent)
-    // console.log(battleResultsDiv.childNodes[3].textContent)
-    // console.log(kings, attackKingID, defendKingID)
+    }
     
     let winnerH1 = document.createElement("h1")
     winnerH1.textContent = "Winner! This house scored higher"
@@ -85,24 +107,3 @@ function kingBattle(kings) {
         card2.appendChild(winnerH1)
     }
 }
-
-
-// battleButton.addEventListener("click", () => {
-    
-//     fetch(`http://localhost:3000/kings/${attackKingID}`)
-//         .then(response => response.json())
-//         .then(king => {
-//             let attackKingH1 = document.createElement("h1")
-//             attackKingH1.innerText = king.name
-//             battleResultsDiv.appendChild(attackKingH1)
-//         })
-    
-//     fetch(`http://localhost:3000/kings/${defendKingID}`)
-//         .then(response => response.json())
-//         .then(king => {
-//             let attackKingH1 = document.createElement("h1")
-//             attackKingH1.innerText = king.name
-//             battleResultsDiv.appendChild(attackKingH1)
-//         })            
-// })
-
