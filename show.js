@@ -56,7 +56,7 @@ function listKingsName(king) {
 function listKingsHouses(king) {
     king.houses.map(house => {
         let houseLI = document.createElement('li')
-        houseLI.textContent = house.name
+        houseLI.innerHTML = `${house.name}<br><br>&#x2694`
         houseUL.appendChild(houseLI)
     })
 }

@@ -8,11 +8,9 @@ fetch("http://localhost:3000/kings")
     .then(kings => kings.map(showKings))
 
     function showKings(king) {
-        let image = document.createElement('img')
-        image.innerHTML = '<img src="https://c7.uihere.com/files/163/375/762/crown-jewels-stock-photography-king-royalty-free-crown.jpg" height="40" width="40">'
         let h2 = document.createElement('h2')
-        h2.innerHTML = `<a href="show.html?id=${king.id}">${king.name}</a>`
-        divCard.append(image, h2)
+        h2.innerHTML = `<a href="show.html?id=${king.id}">${king.name}<br><br>♛<br><br>Houses: ${king.houses.length}</a>`
+        divCard.appendChild(h2)
         }
 
 let h1 = document.createElement('h1')

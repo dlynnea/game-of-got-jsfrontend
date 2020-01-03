@@ -13,10 +13,19 @@ body {
 
 h3 {
     font-size: 24px;
+    float: right;
+    width: 750px;
+    margin-right: 70px;
 }
 
 div#dead-div {
     font-size: 2em;
+}
+
+div#dead-div > h1 {
+    font-size: 2em;
+    clear: both;
+    color: rgb(133, 5, 5);
 }
 
 a {
@@ -36,8 +45,12 @@ a:hover {
 }
 
 label {
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 10px;
+}
+
+li {
+    font-size: 2em;
 }
 
 footer {
@@ -46,9 +59,24 @@ footer {
     padding-top: 20px;
 }
 
+aside.quote {
+    float: left;
+    width: 500px;
+    height: 200px;
+    /* background: url(images/openquote.gif) top left no-repeat; */
+    color: rgb(7, 7, 7);
+    font-size: 26px;
+    line-height: 1.2;
+    font-style: italic;
+    padding: 5px;
+    margin-left: 40px;
+    /* border: 2px solid rgba(243, 241, 241, 0.185);
+    border-radius: 10px; */
+}
+
 /* Meyer Web */
 html, div, span, applet, object, iframe,
-h1, h2, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+h1, h2, h5, h6, p, pre, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -67,7 +95,7 @@ time, mark, audio, video {
     vertical-align: baseline; */
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -80,11 +108,11 @@ ol, ul {
 blockquote, q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
+/* blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
-}
+} */
 table {
     border-collapse: collapse;
     border-spacing: 0;
